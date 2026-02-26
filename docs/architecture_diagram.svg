@@ -1,24 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="Segoe UI, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 880" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
       <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.15"/>
     </filter>
-  </defs>
-
-  <!-- Background -->
-  <rect width="900" height="720" fill="#FAFBFC" rx="8"/>
-
-  <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1A1A2E">ADK Anomaly Detection Agent -- Architecture</text>
-
-  <!-- User Layer -->
-  <rect x="280" y="56" width="340" height="52" rx="26" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="450" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="#1A73E8">User (Natural Language)</text>
-  <text x="450" y="95" text-anchor="middle" font-size="11" fill="#5F6368">"Show me recent revenue anomalies"</text>
-
-  <!-- Arrow: User to Agent -->
-  <line x1="450" y1="108" x2="450" y2="138" stroke="#4285F4" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
-  <defs>
     <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#4285F4"/>
     </marker>
@@ -30,107 +14,111 @@
     </marker>
   </defs>
 
-  <!-- ADK Agent Box -->
-  <rect x="120" y="140" width="660" height="260" rx="8" fill="#FFFFFF" stroke="#4285F4" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="120" y="140" width="660" height="36" rx="8" fill="#4285F4"/>
-  <rect x="120" y="160" width="660" height="16" fill="#4285F4"/>
-  <text x="450" y="163" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">anomaly_detection_agent (Gemini 2.5 Flash via AI Studio)</text>
+  <rect width="1100" height="880" fill="#FAFBFC" rx="8"/>
 
-  <!-- Agent Instruction Box -->
-  <rect x="145" y="186" width="610" height="36" rx="4" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
-  <text x="450" y="200" text-anchor="middle" font-size="11" fill="#5F6368">System Instruction: Retail anomaly detection specialist</text>
-  <text x="450" y="214" text-anchor="middle" font-size="10" fill="#80868B">Z-score analysis | ARIMA_PLUS forecasting | Regional/category drill-down</text>
+  <text x="550" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1A1A2E">ADK Anomaly Detection Agent -- Architecture</text>
+  <text x="550" y="62" text-anchor="middle" font-size="13" fill="#80868B">BigQuery ML ARIMA_PLUS + Z-score Statistical Detection</text>
 
-  <!-- Tool boxes - Row 1 -->
-  <rect x="145" y="232" width="190" height="52" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
-  <text x="240" y="252" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">get_recent_revenue</text>
-  <text x="240" y="268" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">_anomalies(days)</text>
+  <rect x="340" y="82" width="420" height="60" rx="30" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="550" y="108" text-anchor="middle" font-size="15" font-weight="600" fill="#1A73E8">User (Natural Language)</text>
+  <text x="550" y="128" text-anchor="middle" font-size="12" fill="#5F6368">"Show me recent revenue anomalies"</text>
 
-  <rect x="355" y="232" width="190" height="52" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
-  <text x="450" y="252" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">get_recent_stockout</text>
-  <text x="450" y="268" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">_anomalies(days)</text>
+  <line x1="550" y1="142" x2="550" y2="178" stroke="#4285F4" stroke-width="2" marker-end="url(#arrowBlue)"/>
 
-  <rect x="565" y="232" width="190" height="52" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
-  <text x="660" y="252" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">get_anomaly_detail</text>
-  <text x="660" y="268" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">(sale_date)</text>
+  <rect x="100" y="180" width="900" height="300" rx="10" fill="#FFFFFF" stroke="#4285F4" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="100" y="180" width="900" height="42" rx="10" fill="#4285F4"/>
+  <rect x="100" y="204" width="900" height="18" fill="#4285F4"/>
+  <text x="550" y="207" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">anomaly_detection_agent (Gemini 2.5 Flash via AI Studio)</text>
 
-  <!-- Tool boxes - Row 2 -->
-  <rect x="145" y="296" width="190" height="52" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
-  <text x="240" y="316" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">get_revenue_forecast</text>
-  <text x="240" y="332" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">(horizon_days)</text>
+  <rect x="130" y="234" width="840" height="44" rx="6" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
+  <text x="550" y="252" text-anchor="middle" font-size="12" fill="#5F6368">System Instruction: Retail anomaly detection specialist</text>
+  <text x="550" y="268" text-anchor="middle" font-size="11" fill="#80868B">Z-score analysis  |  ARIMA_PLUS forecasting  |  Regional and category drill-down  |  Known event cross-reference</text>
 
-  <rect x="355" y="296" width="190" height="52" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
-  <text x="450" y="316" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">get_stockout_forecast</text>
-  <text x="450" y="332" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">(horizon_days)</text>
+  <rect x="130" y="292" width="260" height="60" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="260" y="318" text-anchor="middle" font-size="12" font-weight="600" fill="#0D652D">get_recent_revenue_anomalies</text>
+  <text x="260" y="336" text-anchor="middle" font-size="11" fill="#5F6368">(days: int = 90)</text>
 
-  <rect x="565" y="296" width="190" height="52" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
-  <text x="660" y="316" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">get_anomaly_summary</text>
-  <text x="660" y="332" text-anchor="middle" font-size="10" fill="#5F6368">(full dataset overview)</text>
+  <rect x="420" y="292" width="260" height="60" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="550" y="318" text-anchor="middle" font-size="12" font-weight="600" fill="#0D652D">get_recent_stockout_anomalies</text>
+  <text x="550" y="336" text-anchor="middle" font-size="11" fill="#5F6368">(days: int = 90)</text>
 
-  <!-- Tool Legend -->
-  <rect x="145" y="360" width="12" height="12" rx="2" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
-  <text x="162" y="371" font-size="10" fill="#5F6368">Z-score Detection (SQL Window Functions)</text>
-  <rect x="400" y="360" width="12" height="12" rx="2" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1"/>
-  <text x="417" y="371" font-size="10" fill="#5F6368">ARIMA_PLUS Forecasting (BigQuery ML)</text>
+  <rect x="710" y="292" width="260" height="60" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="840" y="318" text-anchor="middle" font-size="12" font-weight="600" fill="#0D652D">get_anomaly_detail</text>
+  <text x="840" y="336" text-anchor="middle" font-size="11" fill="#5F6368">(sale_date: str)</text>
 
-  <!-- Arrows: Agent to BigQuery -->
-  <line x1="240" y1="400" x2="240" y2="440" stroke="#0D652D" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
-  <line x1="450" y1="400" x2="450" y2="440" stroke="#E8710A" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
-  <line x1="660" y1="400" x2="660" y2="440" stroke="#0D652D" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <rect x="130" y="366" width="260" height="60" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
+  <text x="260" y="392" text-anchor="middle" font-size="12" font-weight="600" fill="#E8710A">get_revenue_forecast</text>
+  <text x="260" y="410" text-anchor="middle" font-size="11" fill="#5F6368">(horizon_days: int = 30)</text>
 
-  <!-- Labels on arrows -->
-  <text x="240" y="428" text-anchor="middle" font-size="9" fill="#0D652D">Fixed SQL</text>
-  <text x="450" y="428" text-anchor="middle" font-size="9" fill="#E8710A">ML.FORECAST()</text>
-  <text x="660" y="428" text-anchor="middle" font-size="9" fill="#0D652D">Fixed SQL</text>
+  <rect x="420" y="366" width="260" height="60" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
+  <text x="550" y="392" text-anchor="middle" font-size="12" font-weight="600" fill="#E8710A">get_stockout_forecast</text>
+  <text x="550" y="410" text-anchor="middle" font-size="11" fill="#5F6368">(horizon_days: int = 30)</text>
 
-  <!-- BigQuery Layer -->
-  <rect x="60" y="442" width="780" height="260" rx="8" fill="#FFFFFF" stroke="#4285F4" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="60" y="442" width="780" height="36" rx="8" fill="#1A73E8"/>
-  <rect x="60" y="462" width="780" height="16" fill="#1A73E8"/>
-  <text x="450" y="465" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">BigQuery (anomaly_detection dataset)</text>
+  <rect x="710" y="366" width="260" height="60" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+  <text x="840" y="392" text-anchor="middle" font-size="12" font-weight="600" fill="#0D652D">get_anomaly_summary</text>
+  <text x="840" y="410" text-anchor="middle" font-size="11" fill="#5F6368">(full dataset overview)</text>
 
-  <!-- ARIMA Models Box -->
-  <rect x="85" y="490" width="260" height="140" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
-  <text x="215" y="510" text-anchor="middle" font-size="12" font-weight="bold" fill="#E8710A">ARIMA_PLUS Models</text>
+  <rect x="130" y="440" width="14" height="14" rx="3" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
+  <text x="150" y="452" font-size="11" fill="#5F6368">Z-score Detection (SQL Window Functions)</text>
+  <rect x="430" y="440" width="14" height="14" rx="3" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1"/>
+  <text x="450" y="452" font-size="11" fill="#5F6368">ARIMA_PLUS Forecasting (BigQuery ML)</text>
 
-  <rect x="100" y="520" width="230" height="44" rx="4" fill="#FFFBF0" stroke="#F9AB00" stroke-width="1"/>
-  <text x="215" y="537" text-anchor="middle" font-size="10" font-weight="600" fill="#E8710A">revenue_forecast_model</text>
-  <text x="215" y="552" text-anchor="middle" font-size="9" fill="#80868B">ARIMA(1,1,1) | Weekly + Yearly | US Holidays</text>
+  <line x1="260" y1="480" x2="260" y2="530" stroke="#0D652D" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="550" y1="480" x2="550" y2="530" stroke="#E8710A" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="840" y1="480" x2="840" y2="530" stroke="#0D652D" stroke-width="2" marker-end="url(#arrowGreen)"/>
 
-  <rect x="100" y="572" width="230" height="44" rx="4" fill="#FFFBF0" stroke="#F9AB00" stroke-width="1"/>
-  <text x="215" y="589" text-anchor="middle" font-size="10" font-weight="600" fill="#E8710A">stockout_forecast_model</text>
-  <text x="215" y="604" text-anchor="middle" font-size="9" fill="#80868B">ARIMA(0,1,1) | Spikes + Steps | US Holidays</text>
+  <text x="260" y="516" text-anchor="middle" font-size="10" fill="#0D652D">Fixed SQL</text>
+  <text x="550" y="516" text-anchor="middle" font-size="10" fill="#E8710A">ML.FORECAST()</text>
+  <text x="840" y="516" text-anchor="middle" font-size="10" fill="#0D652D">Fixed SQL</text>
 
-  <!-- Tables Box -->
-  <rect x="370" y="490" width="445" height="196" rx="6" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
-  <text x="592" y="510" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A73E8">Tables</text>
+  <rect x="60" y="532" width="980" height="310" rx="10" fill="#FFFFFF" stroke="#1A73E8" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="532" width="980" height="42" rx="10" fill="#1A73E8"/>
+  <rect x="60" y="556" width="980" height="18" fill="#1A73E8"/>
+  <text x="550" y="559" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">BigQuery (anomaly_detection dataset)</text>
 
-  <!-- Table entries -->
-  <rect x="385" y="520" width="200" height="30" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
-  <text x="485" y="540" text-anchor="middle" font-size="10" fill="#202124">fct_daily_sales (45,650 rows)</text>
+  <rect x="85" y="588" width="340" height="170" rx="8" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5"/>
+  <text x="255" y="612" text-anchor="middle" font-size="14" font-weight="bold" fill="#E8710A">ARIMA_PLUS Models</text>
 
-  <rect x="600" y="520" width="200" height="30" rx="4" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
-  <text x="700" y="540" text-anchor="middle" font-size="10" fill="#202124">daily_totals (1,826 rows)</text>
+  <rect x="105" y="624" width="300" height="54" rx="6" fill="#FFFBF0" stroke="#F9AB00" stroke-width="1"/>
+  <text x="255" y="644" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">revenue_forecast_model</text>
+  <text x="255" y="660" text-anchor="middle" font-size="10" fill="#80868B">ARIMA(1,1,1) | Weekly + Yearly seasonality</text>
+  <text x="255" y="674" text-anchor="middle" font-size="10" fill="#80868B">US Holidays | Step changes</text>
 
-  <rect x="385" y="558" width="200" height="30" rx="4" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
-  <text x="485" y="578" text-anchor="middle" font-size="10" fill="#0D652D">revenue_anomalies (108)</text>
+  <rect x="105" y="688" width="300" height="54" rx="6" fill="#FFFBF0" stroke="#F9AB00" stroke-width="1"/>
+  <text x="255" y="708" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">stockout_forecast_model</text>
+  <text x="255" y="724" text-anchor="middle" font-size="10" fill="#80868B">ARIMA(0,1,1) | No seasonality detected</text>
+  <text x="255" y="738" text-anchor="middle" font-size="10" fill="#80868B">US Holidays | Spikes + dips + steps</text>
 
-  <rect x="600" y="558" width="200" height="30" rx="4" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
-  <text x="700" y="578" text-anchor="middle" font-size="10" fill="#0D652D">stockout_anomalies (119)</text>
+  <rect x="455" y="588" width="560" height="226" rx="8" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="735" y="612" text-anchor="middle" font-size="14" font-weight="bold" fill="#1A73E8">Tables</text>
 
-  <rect x="385" y="596" width="200" height="30" rx="4" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
-  <text x="485" y="616" text-anchor="middle" font-size="10" fill="#5F6368">anomaly_reference (10)</text>
+  <rect x="475" y="624" width="250" height="36" rx="5" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+  <text x="600" y="640" text-anchor="middle" font-size="11" font-weight="600" fill="#202124">fct_daily_sales</text>
+  <text x="600" y="654" text-anchor="middle" font-size="10" fill="#80868B">45,650 rows | 5 regions x 5 categories</text>
 
-  <!-- Detection Method Labels -->
-  <rect x="600" y="596" width="200" height="30" rx="4" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
-  <text x="700" y="612" text-anchor="middle" font-size="9" fill="#5F6368">Z-score: 30-day rolling avg</text>
-  <text x="700" y="623" text-anchor="middle" font-size="9" fill="#5F6368">Threshold: +/- 2.0 std devs</text>
+  <rect x="745" y="624" width="250" height="36" rx="5" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+  <text x="870" y="640" text-anchor="middle" font-size="11" font-weight="600" fill="#202124">daily_totals</text>
+  <text x="870" y="654" text-anchor="middle" font-size="10" fill="#80868B">1,826 rows | Aggregated daily</text>
 
-  <!-- Data Pipeline note -->
-  <rect x="85" y="642" width="260" height="44" rx="4" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
-  <text x="215" y="659" text-anchor="middle" font-size="10" font-weight="600" fill="#5F6368">Data Pipeline</text>
-  <text x="215" y="675" text-anchor="middle" font-size="9" fill="#80868B">generate_data.py > CSV > GCS > BigQuery</text>
+  <rect x="475" y="672" width="250" height="36" rx="5" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
+  <text x="600" y="688" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">revenue_anomalies</text>
+  <text x="600" y="702" text-anchor="middle" font-size="10" fill="#5F6368">108 detected | 31 matched injected</text>
 
-  <!-- Stats Footer -->
-  <text x="450" y="712" text-anchor="middle" font-size="10" fill="#80868B">5 Years | 5 Regions | 5 Categories | $2.92B Revenue | 10 Known Events | Cost: $0</text>
+  <rect x="745" y="672" width="250" height="36" rx="5" fill="#E6F4EA" stroke="#34A853" stroke-width="1"/>
+  <text x="870" y="688" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">stockout_anomalies</text>
+  <text x="870" y="702" text-anchor="middle" font-size="10" fill="#5F6368">119 detected | 36 matched injected</text>
+
+  <rect x="475" y="720" width="250" height="36" rx="5" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
+  <text x="600" y="736" text-anchor="middle" font-size="11" font-weight="600" fill="#5F6368">anomaly_reference</text>
+  <text x="600" y="750" text-anchor="middle" font-size="10" fill="#80868B">10 known events | Ground truth</text>
+
+  <rect x="745" y="720" width="250" height="36" rx="5" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
+  <text x="870" y="736" text-anchor="middle" font-size="10" font-weight="600" fill="#5F6368">Detection: Z-score +/- 2.0 std devs</text>
+  <text x="870" y="750" text-anchor="middle" font-size="10" fill="#80868B">30-day rolling average window</text>
+
+  <rect x="85" y="772" width="340" height="50" rx="6" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1"/>
+  <text x="255" y="793" text-anchor="middle" font-size="11" font-weight="600" fill="#5F6368">Data Pipeline</text>
+  <text x="255" y="810" text-anchor="middle" font-size="10" fill="#80868B">generate_data.py --> CSV --> Cloud Storage --> BigQuery</text>
+
+  <text x="550" y="868" text-anchor="middle" font-size="12" fill="#80868B">5 Years (2020-2024)  |  5 Regions  |  5 Categories  |  $2.92B Revenue  |  10 Known Events  |  Cost: $0</text>
 </svg>

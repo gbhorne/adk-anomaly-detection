@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#5F6368"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="520" fill="#FAFBFC" rx="6"/>
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#1A1A2E">Data Flow</text>
+
+  <!-- Row 1: Data Generation -->
+  <rect x="50" y="56" width="160" height="44" rx="6" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="130" y="83" text-anchor="middle" font-size="11" font-weight="600" fill="#5F6368">generate_data.py</text>
+
+  <line x1="210" y1="78" x2="268" y2="78" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="270" y="56" width="100" height="44" rx="6" fill="#F1F3F4" stroke="#DADCE0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="83" text-anchor="middle" font-size="11" font-weight="600" fill="#5F6368">CSV</text>
+
+  <line x1="370" y1="78" x2="428" y2="78" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="430" y="56" width="160" height="44" rx="6" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="510" y="83" text-anchor="middle" font-size="11" font-weight="600" fill="#1A73E8">Cloud Storage</text>
+
+  <line x1="590" y1="78" x2="648" y2="78" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="650" y="56" width="200" height="44" rx="6" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="750" y="76" text-anchor="middle" font-size="11" font-weight="600" fill="#1A73E8">BigQuery</text>
+  <text x="750" y="92" text-anchor="middle" font-size="10" fill="#5F6368">fct_daily_sales (45,650)</text>
+
+  <!-- Arrow down from BQ -->
+  <line x1="750" y1="100" x2="750" y2="148" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 2: Aggregation -->
+  <rect x="620" y="150" width="260" height="44" rx="6" fill="#E8F0FE" stroke="#1A73E8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="750" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#1A73E8">daily_totals</text>
+  <text x="750" y="186" text-anchor="middle" font-size="10" fill="#5F6368">1,826 aggregated daily rows</text>
+
+  <!-- Fork: two arrows down -->
+  <line x1="680" y1="194" x2="320" y2="260" stroke="#E8710A" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="820" y1="194" x2="680" y2="260" stroke="#0D652D" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 3: Two processing paths -->
+  <rect x="160" y="262" width="260" height="56" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="290" y="284" text-anchor="middle" font-size="12" font-weight="600" fill="#E8710A">ARIMA_PLUS Models</text>
+  <text x="290" y="302" text-anchor="middle" font-size="10" fill="#80868B">revenue + stockout forecasting</text>
+
+  <rect x="540" y="262" width="260" height="56" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="670" y="284" text-anchor="middle" font-size="12" font-weight="600" fill="#0D652D">Z-score SQL</text>
+  <text x="670" y="302" text-anchor="middle" font-size="10" fill="#80868B">30-day rolling window detection</text>
+
+  <!-- Arrows down from processing -->
+  <line x1="290" y1="318" x2="290" y2="358" stroke="#E8710A" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="670" y1="318" x2="670" y2="358" stroke="#0D652D" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 4: Outputs -->
+  <rect x="160" y="360" width="260" height="44" rx="6" fill="#FEF7E0" stroke="#F9AB00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="290" y="387" text-anchor="middle" font-size="11" font-weight="600" fill="#E8710A">ML.FORECAST()</text>
+
+  <rect x="540" y="360" width="260" height="44" rx="6" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="670" y="380" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">revenue_anomalies (108)</text>
+  <text x="670" y="396" text-anchor="middle" font-size="11" font-weight="600" fill="#0D652D">stockout_anomalies (119)</text>
+
+  <!-- Converge to agent -->
+  <line x1="290" y1="404" x2="430" y2="448" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="670" y1="404" x2="530" y2="448" stroke="#5F6368" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Row 5: Agent -->
+  <rect x="350" y="450" width="240" height="48" rx="24" fill="#4285F4" stroke="#1A73E8" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="470" y="470" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">ADK Agent (6 tools)</text>
+  <text x="470" y="488" text-anchor="middle" font-size="11" fill="#E8F0FE">Natural Language Response</text>
+</svg>

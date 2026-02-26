@@ -149,7 +149,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full ADRs:
 - ARIMA_PLUS models capturing weekly + yearly seasonality with US holidays
 - Agent correctly cross-references detected anomalies with known events
 
-## Portfolio Context
+## Agent Build Portfolio Context
 
 This is project 5 in a GCP data engineering portfolio:
 
@@ -158,7 +158,7 @@ This is project 5 in a GCP data engineering portfolio:
 | 1 | [Enterprise Analytics](https://github.com/gbhorne/enterprise-analytics) | Complete |
 | 2 | [Terraform IaC](https://github.com/gbhorne/terraform-gcp-analytics) | Complete |
 | 3 | [ADK Multi-Agent System](https://github.com/gbhorne/adk-retail-agents) | Complete |
-| 4 | ADK NL2SQL Agent | In Progress |
+| 4 | ADK NL2SQL Agent | Complete |
 | 5 | **ADK Anomaly Detection** | Complete |
 | 6 | Research Agent | Planned |
 | 7 | MLOps Pipeline | Planned |

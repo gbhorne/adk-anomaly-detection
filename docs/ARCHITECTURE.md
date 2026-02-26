@@ -12,26 +12,7 @@ An ADK agent powered by Gemini 2.5 Flash provides a natural language interface t
 
 ## Data Flow
 
-```
-generate_data.py --> CSV --> Cloud Storage --> BigQuery (fct_daily_sales)
-                                                  |
-                                                  v
-                                        daily_totals (aggregated)
-                                           /              \
-                                          v                v
-                                  ARIMA_PLUS Models    Z-score SQL
-                                  (revenue, stockout)  (rolling window)
-                                          |                |
-                                          v                v
-                                  ML.FORECAST()     revenue_anomalies
-                                                    stockout_anomalies
-                                                          |
-                                                          v
-                                                  ADK Agent (6 tools)
-                                                          |
-                                                          v
-                                                  Natural Language Response
-```
+![Data Flow Diagram](data_flow_diagram.svg)
 
 ## Architectural Decision Records
 

@@ -151,14 +151,14 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full ADRs:
 
 ## Agent Build Portfolio Context
 
-This is project 5 in a GCP data engineering portfolio:
+This is project 5 in a GCP AI/ML and data engineering portfolio:
 
 | # | Project | Status |
 |---|---------|--------|
 | 1 | [Enterprise Analytics](https://github.com/gbhorne/enterprise-analytics) | Complete |
 | 2 | [Terraform IaC](https://github.com/gbhorne/terraform-gcp-analytics) | Complete |
 | 3 | [ADK Multi-Agent System](https://github.com/gbhorne/adk-retail-agents) | Complete |
-| 4 | ADK NL2SQL Agent | Complete |
+| 4 | ADK NL2SQL Agent | In Progress |
 | 5 | **ADK Anomaly Detection** | Complete |
 | 6 | Research Agent | Planned |
 | 7 | MLOps Pipeline | Planned |

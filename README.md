@@ -151,7 +151,7 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for full ADRs:
 
 ## Agent Build Portfolio Context
 
-This is project 5 in a GCP AI/ML and data engineering portfolio:
+This is project 5 in the GCP AI/ML and Data Engineering portfolio.
 
 | # | Project | Status |
 |---|---------|--------|
